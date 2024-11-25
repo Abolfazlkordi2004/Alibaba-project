@@ -1,0 +1,63 @@
+ul {
+  list-style-type: none;
+}
+
+.css-image-style {
+  border-radius: 8px;
+  border: 1px solid gray;
+  margin: 3px;
+  padding: 3px;
+}
+
+body {
+  font-size: 14px;
+  margin-top: 250px;
+}
+
+h2,
+h3 {
+  font-size: 18px;
+}
+
+.col-style-2,
+.col-style-1 {
+  text-align: right;
+}
+
+.col-ul {
+  text-align: right;
+}
+
+.logo-footer {
+  /* width: 25px;
+  height: 25px; */
+  margin: 5px;
+  color: gray;
+}
+
+.text-footer {
+  margin-left: 210px;
+  color: gray;
+  /* text-align: left; */
+}
+
+.gray-text {
+  color: gray;
+}
+
+.col-h3-customer {
+  margin-bottom: 30px;
+}
+
+.alibaba-text {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.email-text {
+  margin-top: 30px;
+}
+
+.phone-text {
+  margin-bottom: 50px;
+}
