@@ -1,130 +1,210 @@
 <!DOCTYPE html>
 <html lang="fa">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>alibaba</title>
-    <link rel="stylesheet" href="/css/tahlil2.css" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/tahlil2.css" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div>
-        <div class="seconddiv">
-            <header class="headenav">
-                <button class="buttondiv">ورود</button>
-                <a href="" class="linkdiv" id="linkone">اب و هوا</a>
-                <a href="" class="linkdiv" id="linktwo">خانه</a>
-            </header>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">ثبت نام و ورود </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item weather-header">
+                  <a class="nav-link" href="#">اب و هوا</a>
+                </li>
+                <li class="nav-item home-header">
+                  <a class="nav-link" href="#">خانه</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="thirddiv"></div>
+      <form class="forthdiv">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-6 col-lg-6 secondinput">
+              <input
+                type="text"
+                name="destination"
+                placeholder="مقصد"
+                id="input2"
+                class="input"
+                autocomplete="off"
+                onkeyup="city_search(this.value, this.id, 'dest-city-list')"
+              /><span id="secondError" class="error"></span>
+              <div id="dest-city-list" class="livesearch hide"></div>
+            </div>
+            <div class="col-6 col-lg-6 firstinput">
+              <input
+                type="text"
+                name="source"
+                placeholder="مبدا"
+                id="input1"
+                class="input"
+                autocomplete="off"
+                onkeyup="city_search(this.value, this.id, 'source-city-list')"
+              /><span id="firstError" class="error"> </span>
+              <div id="source-city-list" class="livesearch hide"></div>
+            </div>
+
+            <!-- Force next columns to break to new line -->
+            <div class="w-100"></div>
+
+            <div class="col-6 col-lg-6 forthinput">
+              <input
+                type="text"
+                name="passennum"
+                placeholder="تعداد مسافران"
+                id="input4"
+                class="input"
+                autocomplete="off"
+              />
+              <span id="forthError" class="error"></span>
+            </div>
+            <div class="col-6 col-lg-6 thirdinput">
+              <input
+                data-jdp
+                data-jdp-min-date="today"
+                data-jdp-only-date
+                type="text"
+                name="date"
+                placeholder="تاریخ"
+                id="input3"
+                class="input"
+                autocomplete="off"
+              />
+              <span id="thirdError" class="error"> </span>
+            </div>
+          </div>
+          <button class="search" type="submit" onclick="validateForm()">جستجو</button>
         </div>
-        <div class="thirddiv">
-
+      </form>
+      <div class="fifthdiv">
+        <div class="texts">
+          <h3 class="textone">قیمت بلیط قطار</h3>
+          <p class="textchild">
+            سفر با قطار می‌تواند یک تصمیم اقتصادی به حساب بیاید، چرا که شما با
+            انتخاب قطار می‌توانید هزینه‌های سفرتان را به طور چشمگیری کاهش دهید.
+            قیمت تمام شده بلیط قطار کاملا بستگی به مسیر، شرکت ریلی و نوع قطار
+            انتخابی شما دارد. بعضی از شرکت‌های ریلی امکان حمل خودرو را برای شما
+            در نظر گرفته‌اند که در صورت انتخاب این گزینه، مبلغی به هزینه‌های سفر
+            شما اضافه می‌شود. برای اطلاع از آخرین قیمت بلیط قطار در مسیر مورد
+            نظر خود کافیست سری به سامانه علی‌بابا بزنید و با مشخص کردن مبدا،
+            مقصد و تاریخ سفر، لیستی از پیشنهادات را دریافت کنید. برای شناسایی
+            ارزان‌ترین بلیط قطار گزینه «مرتب‌سازی بر اساس قیمت» به کمک شما
+            می‌آید. جایگاهی که قطار در حمل و نقل عمومی به خود اختصاص داده،
+            جایگاهی میانه است. در ایران سفر با هواپیما را اغلب هم معنا با سفرهای
+            لوکس و سفر با اتوبوس را سفرهایی مقرون به صرفه می‌دانند‌، در نتیجه
+            سفر با قطار انتخابی بین این دو است. در سال‌های اخیر و با ورود
+            قطارهای پنج ستاره مانند فدک و زندگی به مسیرهای ریلی، جایگاه این
+            وسیله نقلیه متوجه تغییراتی شده است. کسانی که تا پیش از این سفر با
+            هواپیما انتخاب اول‌شان بود، در صورتی که دغدغه زمان نداشته باشند، این
+            قطارها را برای سفر انتخاب می‌کنند. از طرف دیگر قیمت مناسب بلیط قطار
+            نسبت به هواپیما و قیمت نزدیک آن به اتوبوس سبب شده که در سال‌های اخیر
+            مسافران بیشتری از این وسیله نقلیه برای سفر استفاده کنند. بعد از
+            فراهم شدن امکان خرید و استرداد آنلاین بلیط قطار که وب‌سایت علی‌بابا
+            برای اولین بار این خدمت را ارائه کرد، استقبال از قطار رشد چشمگیری
+            داشته است.
+          </p>
         </div>
-        <form class="forthdiv">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-6 col-lg-6 secondinput">
-                        <input type="text" name="destination" placeholder="مقصد" id="input2" class="input" autocomplete="off" onkeyup="city_search(this.value, this.id, 'dest-city-list')"><span id="secondError"
-                            class="error"></span>
-                        <div id="dest-city-list" class="livesearch hide"></div>
-                    </div>
-                    <div class="col-6 col-lg-6 firstinput">
-                        <input type="text" name="source" placeholder="مبدا" id="input1" class="input" autocomplete="off" onkeyup="city_search(this.value, this.id, 'source-city-list')"><span id="firstError"
-                            class="error">
-                        </span>
-                        <div id="source-city-list" class="livesearch hide"></div>
-                    </div>
-
-                    <!-- Force next columns to break to new line -->
-                    <div class="w-100"></div>
-
-                    <div class="col-6 col-lg-6 forthinput">
-                        <input type="text" name="passennum" placeholder="تعداد مسافران" id="input4" class="input" autocomplete="off">
-                        <span id="forthError" class="error"></span>
-                    </div>
-                    <div class="col-6 col-lg-6 thirdinput">
-                        <input data-jdp data-jdp-min-date="today" data-jdp-only-date type="text" name="date" placeholder="تاریخ" id="input3" class="input" autocomplete="off">
-                        <span id="thirdError" class="error">
-
-                        </span>
-                    </div>
-                </div>
-                <button class="search" type="submit">جستجو</button>
-            </div>
-        </form>
-        <div class="fifthdiv">
-            <div class="texts">
-                <h3 class="textone">
-                    قیمت بلیط قطار
-                </h3>
-                <p class="textchild">سفر با قطار می‌تواند یک تصمیم اقتصادی به حساب بیاید، چرا که شما با انتخاب قطار
-                    می‌توانید هزینه‌های سفرتان را به طور چشمگیری کاهش دهید. قیمت تمام شده بلیط قطار کاملا بستگی به مسیر،
-                    شرکت ریلی و نوع قطار انتخابی شما دارد. بعضی از شرکت‌های ریلی امکان حمل خودرو را برای شما در نظر
-                    گرفته‌اند که در صورت انتخاب این گزینه، مبلغی به هزینه‌های سفر شما اضافه می‌شود. برای اطلاع از آخرین
-                    قیمت بلیط قطار در مسیر مورد نظر خود کافیست سری به سامانه علی‌بابا بزنید و با مشخص کردن مبدا، مقصد و
-                    تاریخ سفر، لیستی از پیشنهادات را دریافت کنید. برای شناسایی ارزان‌ترین بلیط قطار گزینه «مرتب‌سازی بر
-                    اساس قیمت» به کمک شما می‌آید.
-                    جایگاهی که قطار در حمل و نقل عمومی به خود اختصاص داده، جایگاهی میانه است. در ایران سفر با هواپیما را
-                    اغلب هم معنا با سفرهای لوکس و سفر با اتوبوس را سفرهایی مقرون به صرفه می‌دانند‌، در نتیجه سفر با قطار
-                    انتخابی بین این دو است. در سال‌های اخیر و با ورود قطارهای پنج ستاره مانند فدک و زندگی به مسیرهای
-                    ریلی، جایگاه این وسیله نقلیه متوجه تغییراتی شده است. کسانی که تا پیش از این سفر با هواپیما انتخاب
-                    اول‌شان بود، در صورتی که دغدغه زمان نداشته باشند، این قطارها را برای سفر انتخاب می‌کنند.
-                    از طرف دیگر قیمت مناسب بلیط قطار نسبت به هواپیما و قیمت نزدیک آن به اتوبوس سبب شده که در سال‌های
-                    اخیر مسافران بیشتری از این وسیله نقلیه برای سفر استفاده کنند. بعد از فراهم شدن امکان خرید و استرداد
-                    آنلاین بلیط قطار که وب‌سایت علی‌بابا برای اولین بار این خدمت را ارائه کرد، استقبال از قطار رشد
-                    چشمگیری داشته است. </p>
-            </div>
-            <div class="textss">
-                <h3 class="textone">رزرو بلیط قطار</h3>
-                <p>رزرو بلیط قطار، سفر با قطار را راحت‌تر از همیشه کرده است. برای خرید اینترنتی بلیط قطار کافی است وارد وب‌سایت علی‌بابا شوید، سپس با وارد کردن نام شهر مبدا و مقصد و تاریخ رفت و برگشت می‌توانید تمام قطارهای شرکت‌های ریلی در مسیر مورد نظرتان را مشاهده کنید. بسته به ساعت حرکت، امکانات قطار و بودجه می‌توانید مناسب‌ترین بلیط را انتخاب کنید و با نهایی کردن رزرو بلیط قطار و پرداخت آن، بلیط خود را به صورت آنلاین دریافت کنید.</p>
-            </div>
-            <div class="qoestionfirst">
-                <details class="bodytext">
-                    <summary>در هر سفر، میزان بار مجاز چقدر است</summary>
-                    <p style="color: rgb(100, 108, 108); font-size: 20px;">میزان مجاز بار به کلاس پرواز و کلاس نرخی بلیط بستگی دارد. هنگام
-                        خرید آنلاین بلیط هواپیما می‌توانید میزان بار مجاز را در اطلاعات بلیط ببینید. طبیعی است که اگر
-                        میزان بارتان بیش از حد مجاز باشد، باید جریمه پرداخت کنید.</p>
-                </details>
-            </div>
-            <div class="qoestiontwo">
-                <details class="bodytext">
-                    <summary>چه زمانی باید در ایستگاه حضور داشته باشیم</summary>
-                    <p style="color: rgb(100, 108, 108); font-size: 20px;">حضور در ایستگاه یک ساعت قبل از حرکت قطار الزامی است. همچنین ده
-                        دقیقه مانده به حركت، تمام درهای قطار بسته خواهد شد و بعد از بسته‌شدن درها برای جلوگیری از خطرات
-                        احتمالی، سوارشدن به قطار امكان‌پذیر نیست</p>
-                </details>
-            </div>
-            <div class="qoestionthree">
-                <details class="bodytext">
-                    <summary>نرخ بلیط قطار برای نوزادان و کودکان زیر ۱۲ سال چگونه است؟</summary>
-                    <p style="color: rgb(100, 108, 108);font-size: 20px;">قیمت بلیط کودک نیم‌بها و نوزاد 10 درصد مبلغ بزرگسال است</p>
-                </details>
-            </div>
+        <div class="textss">
+          <h3 class="textone">رزرو بلیط قطار</h3>
+          <p>
+            رزرو بلیط قطار، سفر با قطار را راحت‌تر از همیشه کرده است. برای خرید
+            اینترنتی بلیط قطار کافی است وارد وب‌سایت علی‌بابا شوید، سپس با وارد
+            کردن نام شهر مبدا و مقصد و تاریخ رفت و برگشت می‌توانید تمام قطارهای
+            شرکت‌های ریلی در مسیر مورد نظرتان را مشاهده کنید. بسته به ساعت حرکت،
+            امکانات قطار و بودجه می‌توانید مناسب‌ترین بلیط را انتخاب کنید و با
+            نهایی کردن رزرو بلیط قطار و پرداخت آن، بلیط خود را به صورت آنلاین
+            دریافت کنید.
+          </p>
         </div>
-
+        <div class="qoestionfirst">
+          <details class="bodytext">
+            <summary>در هر سفر، میزان بار مجاز چقدر است</summary>
+            <p style="color: rgb(100, 108, 108); font-size: 20px">
+              میزان مجاز بار به کلاس پرواز و کلاس نرخی بلیط بستگی دارد. هنگام
+              خرید آنلاین بلیط هواپیما می‌توانید میزان بار مجاز را در اطلاعات
+              بلیط ببینید. طبیعی است که اگر میزان بارتان بیش از حد مجاز باشد،
+              باید جریمه پرداخت کنید.
+            </p>
+          </details>
+        </div>
+        <div class="qoestiontwo">
+          <details class="bodytext">
+            <summary>چه زمانی باید در ایستگاه حضور داشته باشیم</summary>
+            <p style="color: rgb(100, 108, 108); font-size: 20px">
+              حضور در ایستگاه یک ساعت قبل از حرکت قطار الزامی است. همچنین ده
+              دقیقه مانده به حركت، تمام درهای قطار بسته خواهد شد و بعد از
+              بسته‌شدن درها برای جلوگیری از خطرات احتمالی، سوارشدن به قطار
+              امكان‌پذیر نیست
+            </p>
+          </details>
+        </div>
+        <div class="qoestionthree">
+          <details class="bodytext">
+            <summary>
+              نرخ بلیط قطار برای نوزادان و کودکان زیر ۱۲ سال چگونه است؟
+            </summary>
+            <p style="color: rgb(100, 108, 108); font-size: 20px">
+              قیمت بلیط کودک نیم‌بها و نوزاد 10 درصد مبلغ بزرگسال است
+            </p>
+          </details>
+        </div>
+      </div>
     </div>
+</main>ّ
+     
 
     <script src="js/tahlil2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"
+    ></script>
     <script>
-        jalaliDatepicker.startWatch({
+      jalaliDatepicker.startWatch({
         minDate: "attr",
         maxDate: "attr",
         time: true,
-        });
+      });
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/city-search.js" type="text/javascript"></script>
-</body>
-
+  </body>
 </html>
-
-

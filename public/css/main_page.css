@@ -5,7 +5,25 @@
   overflow: hidden;
   position: relative;
   margin-top: 100px;
-  margin-left: 350px;
+  margin-left: 450px;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+  font-weight: 900;
+  position: fixed;
+}
+
+.weather-header {
+  margin-left: 1390px;
+  margin-right: 25px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.home-header {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .pagination-wrapper {

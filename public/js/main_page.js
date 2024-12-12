@@ -76,3 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // تنظیم دکمه‌ها در بارگذاری اولیه
   updateButtons();
 });
+
+const param = new URLSearchParams(window.location.search);
+const traveldate = param.get("23-01-2023");
+document.write(traveldate);
